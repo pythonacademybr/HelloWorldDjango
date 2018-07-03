@@ -1,6 +1,6 @@
 # Helloworld, Django
 
-Código produzido e explicado no artigo sobre Django da Python Academy. [Acesse aqui][https://pythonacademy.com.br/blog/desenvolvimento-web-com-python-e-django-introducao] e saiba mais!
+Código produzido e explicado no artigo sobre Django da Python Academy. [Acesse aqui](https://pythonacademy.com.br/blog/desenvolvimento-web-com-python-e-django-introducao) e saiba mais!
 
 ## Para Instalar
 
@@ -34,8 +34,8 @@ python manage.py runserver
 
 Se gostou do conteúdo, siga a Python Academy no nosso blog e redes sociais!
 
-- [Site][https://pythonacademy.com.br]
-- [Facebook][https://facebook.com.br/pythonacademy/]
-- [Blog][https://pythonacademy.com.br/blog/]
+- [Site](https://pythonacademy.com.br)
+- [Facebook](https://facebook.com.br/pythonacademy/)
+- [Blog](https://pythonacademy.com.br/blog/)
 
 E até a próxima!
