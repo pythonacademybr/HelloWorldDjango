@@ -1,6 +1,6 @@
 # Helloworld, Django
 
-Código produzido e explicado no artigo sobre Django da Python Academy. [Acesse aqui](https://pythonacademy.com.br/blog/desenvolvimento-web-com-python-e-django-introducao) e saiba mais!
+Código produzido no artigo sobre Django da Python Academy. [Acesse aqui](https://pythonacademy.com.br/blog/desenvolvimento-web-com-python-e-django-introducao) e saiba mais!
 
 ## Para Instalar
 
@@ -10,7 +10,7 @@ Para instalar as dependências do projeto, executar:
 pip install -r requirements.txt
 ```
 
-Para criar as _Migration_:
+Para criar as _Migrations_:
 
 ```bash
 python manage.py makemigrations
