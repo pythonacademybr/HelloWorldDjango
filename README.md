@@ -39,3 +39,4 @@ Se gostou do conteúdo, siga a Python Academy no nosso blog e redes sociais!
 - [Blog](https://pythonacademy.com.br/blog/)
 
 E até a próxima!
+please accept this merge
