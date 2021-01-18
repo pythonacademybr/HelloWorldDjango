@@ -1,10 +1,17 @@
 # Helloworld, Django
 
-Código produzido no artigo sobre Django da Python Academy. [Acesse aqui](https://pythonacademy.com.br/blog/desenvolvimento-web-com-python-e-django-introducao) e saiba mais!
+Código produzido como parte do artigo sobre Desenvolvimento Web com Django da Python Academy. 
+[Acesse aqui](https://pythonacademy.com.br/blog/desenvolvimento-web-com-python-e-django-introducao) 
+e saiba mais!
 
-## Para Instalar
+## Instalação
 
-Para instalar as dependências do projeto, executar:
+Primeiro, recomenda-se a criação de um ambiente virtual. 
+
+_Quer saber mais ambientes virtuais? Então [acesse o link para nosso post 
+sobre ambientes virtuais no Python](https://pythonacademy.com.br/blog/python-e-virtualenv-como-programar-em-ambientes-virtuais)!_
+
+Com seu ambiente virtual configurado, instale as dependências do projeto com:
 
 ```bash
 pip install -r requirements.txt
@@ -22,9 +29,9 @@ Para efetivar as _Migrations_ no banco de dados:
 python manage.py migrate
 ```
 
-## Para Executar
+## Execução
 
-Para executar o Servidor de testes do Django, execute:
+Para executar o servidor de testes do Django, execute:
 
 ```bash
 python manage.py runserver
