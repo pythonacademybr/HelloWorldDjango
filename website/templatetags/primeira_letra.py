@@ -10,7 +10,6 @@ def primeira_letra(value):
     """
     Verifica se <value> inicia com <arg>.
     :param value: valor do filtro
-    :param arg: argumento do filtro
     :return: True se value iniciar com arg, False caso contrário
     """
     return list(value)[0]

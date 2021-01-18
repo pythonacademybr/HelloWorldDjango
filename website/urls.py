@@ -1,6 +1,5 @@
-from website.views import IndexTemplateView, FuncionarioListView, FuncionarioUpdateView, FuncionarioCreateView, \
-    FuncionarioDeleteView
-
+from website.views import IndexTemplateView, FuncionarioListView, \
+    FuncionarioUpdateView, FuncionarioCreateView, FuncionarioDeleteView
 from django.urls import path
 
 app_name = 'website'

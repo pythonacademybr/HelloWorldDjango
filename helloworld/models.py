@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Funcionario(models.Model):
+    """
+    Modelo de Funcionários do Sistema
+    """
 
     nome = models.CharField(
         max_length=255,
