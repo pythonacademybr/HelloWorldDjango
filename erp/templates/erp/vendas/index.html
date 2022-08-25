@@ -1,0 +1,33 @@
+<!-- Estendemos do template base -->
+{% extends "erp/_layouts/base.html" %}
+
+<!-- Bloco que define o <title></title> da nossa página -->
+{% block title %}Página Inicial{% endblock %}
+
+<!-- Bloco de conteúdo da nossa página -->
+{% block conteudo %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Cadastrar Venda</h5>
+          <p class="card-text">Cadastre aqui um novo registro de <code>Venda</code>.</p>
+          <a href="{% url 'erp:cadastra_venda' %}" class="btn btn-primary">Nova Venda</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lista de Vendas</h5>
+          <p class="card-text">
+            Veja aqui a lista de <code>Vendas</code> registradas.
+          </p>
+          <a href="{% url 'erp:lista_vendas' %}" class="btn btn-primary">Vá para Lista</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

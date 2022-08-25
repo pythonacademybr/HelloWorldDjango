@@ -1,0 +1,66 @@
+{% extends "erp/_layouts/base.html" %}
+
+{% block title %}Lista de Funcionários{% endblock %}
+
+{% load primeira_letra %}
+
+{% block conteudo %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card border-dark" data-aos="fade-in" data-aos-duration="750">
+                <div class="card-header"><b>Lista de Funcionários</b></div>
+                    <div class="card-body">
+                        {% if funcionarios|length > 0 %}
+                            <p class="card-text">Aqui está a lista de <code>Funcionários</code> cadastrados.</p>
+
+                            <table class="table table-light table-striped table-hover align-middle">
+                                <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Sobrenome</th>
+                                    <th scope="col">Tempo de Serviço</th>
+                                    <th scope="col">Remuneração</th>
+                                    <th scope="col" class="text-center">Ações</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for funcionario in funcionarios %}
+                                    <tr>
+                                        <th scope="row">{{ funcionario.nome|primeira_letra }}</th>
+                                        <td>{{ funcionario.nome }}</td>
+                                        <td>{{ funcionario.sobrenome }}</td>
+                                        <td>{{ funcionario.tempo_de_servico }}</td>
+                                        <td>{{ funcionario.remuneracao }}</td>
+                                        <td class="text-center">
+                                            <a href="{% url 'erp:atualiza_funcionario' pk=funcionario.id %}"
+                                               class="btn btn-primary btn-sm">
+                                                Atualizar
+                                            </a>
+                                            <a href="{% url 'erp:deleta_funcionario' pk=funcionario.id %}"
+                                               class="btn btn-danger btn-sm">
+                                                Excluir
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        {% else %}
+                            <div class="text-center mt-5 mb-5 jumbotron">
+                                <h5>Nenhum <code>Funcionário</code> cadastrado ainda.</h5>
+                            </div>
+                        {% endif %}
+                        <hr/>
+                        <div class="text-end">
+                            <a href="{% url 'erp:cadastra_funcionario' %}" class="btn btn-primary btn-sm">
+                                Cadastrar Funcionário
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

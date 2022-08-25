@@ -1,0 +1,62 @@
+{% extends "erp/_layouts/base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}Cadastro de Funcionários{% endblock %}
+
+{% block conteudo %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastro de Funcionário</h5>
+                        <p class="card-text">
+                            Complete o formulário abaixo para cadastrar
+                            um novo <code>Funcionário</code>.
+                        </p>
+                        <form method="post">
+                            <!-- Não se esqueça dessa tag -->
+                            {% csrf_token %}
+
+                            <!-- Nome -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Nome</span>
+                                {% render_field form.nome class+="form-control" %}
+                            </div>
+
+                            <!-- Sobrenome -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Sobrenome</span>
+                                {% render_field form.sobrenome class+="form-control" %}
+                            </div>
+
+                            <!-- CPF -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">CPF</span>
+                                {% render_field form.cpf class+="form-control" %}
+                            </div>
+
+                            <!-- Tempo de Serviço -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Tempo de Serviço</span>
+                                {% render_field form.tempo_de_servico class+="form-control" %}
+                            </div>
+
+                            <!-- Remuneração -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Remuneração</span>
+                                {% render_field form.remuneracao class+="form-control" %}
+                            </div>
+                            <hr>
+                            <div class="text-end">
+                                <a href="{% url 'erp:lista_funcionarios' %}" class="btn btn-outline-primary">Voltar</a>
+                                <button class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

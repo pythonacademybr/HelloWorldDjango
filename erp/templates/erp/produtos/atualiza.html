@@ -1,0 +1,46 @@
+{% extends "erp/_layouts/base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}Atualização de Produto{% endblock %}
+
+{% block conteudo %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Atualizar Dados de Produto</h5>
+                        <form method="post">
+                            <!-- Não se esqueça dessa tag -->
+                            {% csrf_token %}
+
+                            <!-- Nome -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Nome</span>
+                                {% render_field form.nome class+="form-control" %}
+                            </div>
+
+                            <!-- Descrição -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Descrição</span>
+                                {% render_field form.descricao class+="form-control" %}
+                            </div>
+
+                            <!-- Preço -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Preço</span>
+                                {% render_field form.preco class+="form-control" %}
+                            </div>
+                            <hr/>
+                            <div class="text-end">
+                                <a href="{% url 'erp:lista_produtos' %}" class="btn btn-outline-primary">Voltar</a>
+                                <button class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
